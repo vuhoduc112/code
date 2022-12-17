@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+  <androidx.drawerlayout.widget.DrawerLayout
+      android:id="@+id/drawerlayout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+          <androidx.appcompat.widget.Toolbar
+              android:id="@+id/toolbarmanhinhchinh"
+              android:layout_width="match_parent"
+              android:background="#ff00dfff"
+              app:title="Lapptop Shopping Apps"
+              app:titleTextColor="@color/white"
+              android:layout_height="?attr/actionBarSize"> //tự động pick chiều cao
+          </androidx.appcompat.widget.Toolbar>
+          <ViewFlipper
+              android:id="@+id/viewflipper"
+              android:layout_width="match_parent"
+              android:layout_height="200dp">
+          </ViewFlipper>
+          <LinearLayout
+              android:background="#dde9f6"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/recycleview"
+                  android:layout_marginTop="10dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+              </androidx.recyclerview.widget.RecyclerView>
+          </LinearLayout>
+      </LinearLayout>
+      <com.google.android.material.navigation.NavigationView
+          android:id="@+id/navigationview"
+          android:layout_gravity="start"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+          <ListView
+              android:layout_marginLeft="10dp"
+              android:id="@+id/listviewmanhinhchinh"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+          </ListView>
+
+      </com.google.android.material.navigation.NavigationView>
+  </androidx.drawerlayout.widget.DrawerLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
